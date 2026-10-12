@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitZone Fitness Center - Transform Your Body</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-white font-sans">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-slate-950 border-b border-slate-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <span class="text-2xl font-black tracking-wider text-amber-500">FIT<span class="text-white">ZONE</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#home" class="hover:text-amber-500 transition">Home</a>
+                    <a href="#services" class="hover:text-amber-500 transition">Services</a>
+                    <a href="#calculator" class="hover:text-amber-500 transition">BMI / Price Calculator</a>
+                    <a href="#contact" class="hover:text-amber-500 transition">Contact</a>
+                </div>
+                <div>
+                    <a href="#contact" class="bg-amber-500 text-slate-950 px-4 py-2 rounded-lg font-bold hover:bg-amber-400 transition">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section id="home" class="relative bg-cover bg-center py-24 lg:py-32" style="background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600&auto=format&fit=crop');">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-6xl font-black tracking-tight mb-6">PUMP IRON, <span class="text-amber-500">STAY STRONG</span></h1>
+            <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-8">Unlock your true potential with our state-of-the-art equipment, professional trainers, and high-energy fitness programs.</p>
+            <div class="flex justify-center gap-4">
+                <a href="#contact" class="bg-amber-500 text-slate-950 font-bold px-8 py-3 rounded-lg hover:bg-amber-400 transition">Get Started</a>
+                <a href="#services" class="border border-slate-700 font-bold px-8 py-3 rounded-lg hover:bg-slate-800 transition">Explore Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Our Training Programs</h2>
+                <p class="text-slate-400 max-w-xl mx-auto">Choose the right path for your fitness journey with our expert guidance.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-amber-500 transition">
+                    <div class="text-amber-500 text-3xl mb-4 font-bold">01</div>
+                    <h3 class="text-xl font-bold mb-2">Weight Training</h3>
+                    <p class="text-slate-400 text-sm">Build muscle mass and increase your overall strength with heavy lifting and professional equipment.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-amber-500 transition">
+                    <div class="text-amber-500 text-3xl mb-4 font-bold">02</div>
+                    <h3 class="text-xl font-bold mb-2">Cardio & Fat Loss</h3>
+                    <p class="text-slate-400 text-sm">Burn calories fast and boost your endurance with our top-notch treadmills, bikes, and HIIT zones.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-amber-500 transition">
+                    <div class="text-amber-500 text-3xl mb-4 font-bold">03</div>
+                    <h3 class="text-xl font-bold mb-2">Personal Coaching</h3>
+                    <p class="text-slate-400 text-sm">Get custom diet plans and one-on-one personal training sessions tailored specifically to your body goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive JS Feature: Membership Price Calculator -->
+    <section id="calculator" class="py-20 bg-slate-950 border-t border-b border-slate-800">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 shadow-xl">
+                <h2 class="text-2xl font-bold mb-2 text-center">Membership Price Calculator</h2>
+                <p class="text-slate-400 text-sm text-center mb-6">Select your plan duration to calculate the total cost instantly.</p>
+                
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Choose Plan Type:</label>
+                        <select id="planType" class="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 text-white focus:outline-none focus:border-amber-500">
+                            <option value="basic">Basic Fitness ($30/month)</option>
+                            <option value="pro">Pro Gym + Cardio ($50/month)</option>
+                            <option value="vip">VIP All Access + Personal Trainer ($90/month)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Duration (Months):</label>
+                        <input type="number" id="months" value="1" min="1" max="12" class="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 text-white focus:outline-none focus:border-amber-500">
+                    </div>
+
+                    <div class="bg-slate-800 p-4 rounded-xl flex justify-between items-center">
+                        <span class="text-lg font-semibold">Total Estimated Price:</span>
+                        <span id="totalPrice" class="text-2xl font-bold text-amber-500">$30</span>
+                    </div>
+
+                    <button onclick="calculatePrice()" class="w-full bg-amber-500 text-slate-950 font-bold py-3 rounded-lg hover:bg-amber-400 transition">Calculate Total</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-20 bg-slate-900">
+        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-2">Get In Touch</h2>
+                <p class="text-slate-400 text-sm">Fill out the form below and our team will get back to you shortly.</p>
+            </div>
+            <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <div>
+                    <input type="text" id="name" placeholder="Your Name" required class="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 text-white focus:outline-none focus:border-amber-500">
+                </div>
+                <div>
+                    <input type="email" id="email" placeholder="Your Email Address" required class="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 text-white focus:outline-none focus:border-amber-500">
+                </div>
+                <div>
+                    <textarea id="message" rows="4" placeholder="Your Message or Inquiry" required class="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 text-white focus:outline-none focus:border-amber-500"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-amber-500 text-slate-950 font-bold py-3 rounded-lg hover:bg-amber-400 transition">Send Message</button>
+                <p id="successMsg" class="text-green-400 text-center text-sm hidden mt-2">Thank you! Your message has been sent successfully.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-8 text-center text-slate-500 text-sm border-t border-slate-800">
+        <p>&copy; 2026 FitZone Fitness Center. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        function calculatePrice() {
+            const planType = document.getElementById('planType').value;
+            const months = parseInt(document.getElementById('months').value) || 1;
+            
+            let rate = 30;
+            if (planType === 'pro') rate = 50;
+            if (planType === 'vip') rate = 90;
+
+            const total = rate * months;
+            document.getElementById('totalPrice').innerText = '$' + total;
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            if(name) {
+                document.getElementById('successMsg').classList.remove('hidden');
+                setTimeout(() => {
+                    document.getElementById('successMsg').classList.add('hidden');
+                    event.target.reset();
+                }, 4000);
+            }
+        }
+    </script>
+</body>
+</html>
